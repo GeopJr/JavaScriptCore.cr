@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="javascriptcore">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="javascriptcore">
+  <title>GLib::KeyFileError::KeyNotFound - javascriptcore master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          javascriptcore
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="javascriptcore/Bool" data-name="bool">
+      <a href="../../Bool.html">Bool</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/Enum" data-name="enum">
+      <a href="../../Enum.html">Enum</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/Float32" data-name="float32">
+      <a href="../../Float32.html">Float32</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/Float64" data-name="float64">
+      <a href="../../Float64.html">Float64</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GICrystal" data-name="gicrystal">
+      <a href="../../GICrystal.html">GICrystal</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GICrystal/GeneratedWrapper" data-name="gicrystal::generatedwrapper">
+      <a href="../../GICrystal/GeneratedWrapper.html">GeneratedWrapper</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GICrystal/ObjectCollectedError" data-name="gicrystal::objectcollectederror">
+      <a href="../../GICrystal/ObjectCollectedError.html">ObjectCollectedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GICrystal/Transfer" data-name="gicrystal::transfer">
+      <a href="../../GICrystal/Transfer.html">Transfer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="javascriptcore/GLib" data-name="glib">
+      <a href="../../GLib.html">GLib</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/AsciiType" data-name="glib::asciitype">
+      <a href="../../GLib/AsciiType.html">AsciiType</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/BookmarkFileError" data-name="glib::bookmarkfileerror">
+      <a href="../../GLib/BookmarkFileError.html">BookmarkFileError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/AppNotRegistered" data-name="glib::bookmarkfileerror::appnotregistered">
+      <a href="../../GLib/BookmarkFileError/AppNotRegistered.html">AppNotRegistered</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/FileNotFound" data-name="glib::bookmarkfileerror::filenotfound">
+      <a href="../../GLib/BookmarkFileError/FileNotFound.html">FileNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/InvalidUri" data-name="glib::bookmarkfileerror::invaliduri">
+      <a href="../../GLib/BookmarkFileError/InvalidUri.html">InvalidUri</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/InvalidValue" data-name="glib::bookmarkfileerror::invalidvalue">
+      <a href="../../GLib/BookmarkFileError/InvalidValue.html">InvalidValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/Read" data-name="glib::bookmarkfileerror::read">
+      <a href="../../GLib/BookmarkFileError/Read.html">Read</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/UnknownEncoding" data-name="glib::bookmarkfileerror::unknownencoding">
+      <a href="../../GLib/BookmarkFileError/UnknownEncoding.html">UnknownEncoding</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/UriNotFound" data-name="glib::bookmarkfileerror::urinotfound">
+      <a href="../../GLib/BookmarkFileError/UriNotFound.html">UriNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/BookmarkFileError/Write" data-name="glib::bookmarkfileerror::write">
+      <a href="../../GLib/BookmarkFileError/Write.html">Write</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/Bytes" data-name="glib::bytes">
+      <a href="../../GLib/Bytes.html">Bytes</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ChecksumType" data-name="glib::checksumtype">
+      <a href="../../GLib/ChecksumType.html">ChecksumType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ChildWatchFunc" data-name="glib::childwatchfunc">
+      <a href="../../GLib/ChildWatchFunc.html">ChildWatchFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ClearHandleFunc" data-name="glib::clearhandlefunc">
+      <a href="../../GLib/ClearHandleFunc.html">ClearHandleFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/CompareDataFunc" data-name="glib::comparedatafunc">
+      <a href="../../GLib/CompareDataFunc.html">CompareDataFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/CompareFunc" data-name="glib::comparefunc">
+      <a href="../../GLib/CompareFunc.html">CompareFunc</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/ConvertError" data-name="glib::converterror">
+      <a href="../../GLib/ConvertError.html">ConvertError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/BadUri" data-name="glib::converterror::baduri">
+      <a href="../../GLib/ConvertError/BadUri.html">BadUri</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/EmbeddedNul" data-name="glib::converterror::embeddednul">
+      <a href="../../GLib/ConvertError/EmbeddedNul.html">EmbeddedNul</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/Failed" data-name="glib::converterror::failed">
+      <a href="../../GLib/ConvertError/Failed.html">Failed</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/IllegalSequence" data-name="glib::converterror::illegalsequence">
+      <a href="../../GLib/ConvertError/IllegalSequence.html">IllegalSequence</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/NoConversion" data-name="glib::converterror::noconversion">
+      <a href="../../GLib/ConvertError/NoConversion.html">NoConversion</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/NoMemory" data-name="glib::converterror::nomemory">
+      <a href="../../GLib/ConvertError/NoMemory.html">NoMemory</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/NotAbsolutePath" data-name="glib::converterror::notabsolutepath">
+      <a href="../../GLib/ConvertError/NotAbsolutePath.html">NotAbsolutePath</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ConvertError/PartialInput" data-name="glib::converterror::partialinput">
+      <a href="../../GLib/ConvertError/PartialInput.html">PartialInput</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/CopyFunc" data-name="glib::copyfunc">
+      <a href="../../GLib/CopyFunc.html">CopyFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/DataForeachFunc" data-name="glib::dataforeachfunc">
+      <a href="../../GLib/DataForeachFunc.html">DataForeachFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/DateDMY" data-name="glib::datedmy">
+      <a href="../../GLib/DateDMY.html">DateDMY</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/DateMonth" data-name="glib::datemonth">
+      <a href="../../GLib/DateMonth.html">DateMonth</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/DateWeekday" data-name="glib::dateweekday">
+      <a href="../../GLib/DateWeekday.html">DateWeekday</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/DestroyNotify" data-name="glib::destroynotify">
+      <a href="../../GLib/DestroyNotify.html">DestroyNotify</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/DuplicateFunc" data-name="glib::duplicatefunc">
+      <a href="../../GLib/DuplicateFunc.html">DuplicateFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/EqualFunc" data-name="glib::equalfunc">
+      <a href="../../GLib/EqualFunc.html">EqualFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/Error" data-name="glib::error">
+      <a href="../../GLib/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ErrorClearFunc" data-name="glib::errorclearfunc">
+      <a href="../../GLib/ErrorClearFunc.html">ErrorClearFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ErrorInitFunc" data-name="glib::errorinitfunc">
+      <a href="../../GLib/ErrorInitFunc.html">ErrorInitFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ErrorType" data-name="glib::errortype">
+      <a href="../../GLib/ErrorType.html">ErrorType</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/FileError" data-name="glib::fileerror">
+      <a href="../../GLib/FileError.html">FileError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Acces" data-name="glib::fileerror::acces">
+      <a href="../../GLib/FileError/Acces.html">Acces</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Again" data-name="glib::fileerror::again">
+      <a href="../../GLib/FileError/Again.html">Again</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Badf" data-name="glib::fileerror::badf">
+      <a href="../../GLib/FileError/Badf.html">Badf</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Exist" data-name="glib::fileerror::exist">
+      <a href="../../GLib/FileError/Exist.html">Exist</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Failed" data-name="glib::fileerror::failed">
+      <a href="../../GLib/FileError/Failed.html">Failed</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Fault" data-name="glib::fileerror::fault">
+      <a href="../../GLib/FileError/Fault.html">Fault</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Intr" data-name="glib::fileerror::intr">
+      <a href="../../GLib/FileError/Intr.html">Intr</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Inval" data-name="glib::fileerror::inval">
+      <a href="../../GLib/FileError/Inval.html">Inval</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Io" data-name="glib::fileerror::io">
+      <a href="../../GLib/FileError/Io.html">Io</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Isdir" data-name="glib::fileerror::isdir">
+      <a href="../../GLib/FileError/Isdir.html">Isdir</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Loop" data-name="glib::fileerror::loop">
+      <a href="../../GLib/FileError/Loop.html">Loop</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Mfile" data-name="glib::fileerror::mfile">
+      <a href="../../GLib/FileError/Mfile.html">Mfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nametoolong" data-name="glib::fileerror::nametoolong">
+      <a href="../../GLib/FileError/Nametoolong.html">Nametoolong</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nfile" data-name="glib::fileerror::nfile">
+      <a href="../../GLib/FileError/Nfile.html">Nfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nodev" data-name="glib::fileerror::nodev">
+      <a href="../../GLib/FileError/Nodev.html">Nodev</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Noent" data-name="glib::fileerror::noent">
+      <a href="../../GLib/FileError/Noent.html">Noent</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nomem" data-name="glib::fileerror::nomem">
+      <a href="../../GLib/FileError/Nomem.html">Nomem</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nospc" data-name="glib::fileerror::nospc">
+      <a href="../../GLib/FileError/Nospc.html">Nospc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nosys" data-name="glib::fileerror::nosys">
+      <a href="../../GLib/FileError/Nosys.html">Nosys</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Notdir" data-name="glib::fileerror::notdir">
+      <a href="../../GLib/FileError/Notdir.html">Notdir</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Nxio" data-name="glib::fileerror::nxio">
+      <a href="../../GLib/FileError/Nxio.html">Nxio</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Perm" data-name="glib::fileerror::perm">
+      <a href="../../GLib/FileError/Perm.html">Perm</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Pipe" data-name="glib::fileerror::pipe">
+      <a href="../../GLib/FileError/Pipe.html">Pipe</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Rofs" data-name="glib::fileerror::rofs">
+      <a href="../../GLib/FileError/Rofs.html">Rofs</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileError/Txtbsy" data-name="glib::fileerror::txtbsy">
+      <a href="../../GLib/FileError/Txtbsy.html">Txtbsy</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileSetContentsFlags" data-name="glib::filesetcontentsflags">
+      <a href="../../GLib/FileSetContentsFlags.html">FileSetContentsFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FileTest" data-name="glib::filetest">
+      <a href="../../GLib/FileTest.html">FileTest</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FormatSizeFlags" data-name="glib::formatsizeflags">
+      <a href="../../GLib/FormatSizeFlags.html">FormatSizeFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/FreeFunc" data-name="glib::freefunc">
+      <a href="../../GLib/FreeFunc.html">FreeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/Func" data-name="glib::func">
+      <a href="../../GLib/Func.html">Func</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/GLibError" data-name="glib::gliberror">
+      <a href="../../GLib/GLibError.html">GLibError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/HashFunc" data-name="glib::hashfunc">
+      <a href="../../GLib/HashFunc.html">HashFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/HFunc" data-name="glib::hfunc">
+      <a href="../../GLib/HFunc.html">HFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/HookCheckFunc" data-name="glib::hookcheckfunc">
+      <a href="../../GLib/HookCheckFunc.html">HookCheckFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/HookFlagMask" data-name="glib::hookflagmask">
+      <a href="../../GLib/HookFlagMask.html">HookFlagMask</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/HRFunc" data-name="glib::hrfunc">
+      <a href="../../GLib/HRFunc.html">HRFunc</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/IOChannelError" data-name="glib::iochannelerror">
+      <a href="../../GLib/IOChannelError.html">IOChannelError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Failed" data-name="glib::iochannelerror::failed">
+      <a href="../../GLib/IOChannelError/Failed.html">Failed</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Fbig" data-name="glib::iochannelerror::fbig">
+      <a href="../../GLib/IOChannelError/Fbig.html">Fbig</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Inval" data-name="glib::iochannelerror::inval">
+      <a href="../../GLib/IOChannelError/Inval.html">Inval</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Io" data-name="glib::iochannelerror::io">
+      <a href="../../GLib/IOChannelError/Io.html">Io</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Isdir" data-name="glib::iochannelerror::isdir">
+      <a href="../../GLib/IOChannelError/Isdir.html">Isdir</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Nospc" data-name="glib::iochannelerror::nospc">
+      <a href="../../GLib/IOChannelError/Nospc.html">Nospc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Nxio" data-name="glib::iochannelerror::nxio">
+      <a href="../../GLib/IOChannelError/Nxio.html">Nxio</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Overflow" data-name="glib::iochannelerror::overflow">
+      <a href="../../GLib/IOChannelError/Overflow.html">Overflow</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOChannelError/Pipe" data-name="glib::iochannelerror::pipe">
+      <a href="../../GLib/IOChannelError/Pipe.html">Pipe</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOCondition" data-name="glib::iocondition">
+      <a href="../../GLib/IOCondition.html">IOCondition</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOError" data-name="glib::ioerror">
+      <a href="../../GLib/IOError.html">IOError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOFlags" data-name="glib::ioflags">
+      <a href="../../GLib/IOFlags.html">IOFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/IOStatus" data-name="glib::iostatus">
+      <a href="../../GLib/IOStatus.html">IOStatus</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="javascriptcore/GLib/KeyFileError" data-name="glib::keyfileerror">
+      <a href="../../GLib/KeyFileError.html">KeyFileError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/KeyFileError/GroupNotFound" data-name="glib::keyfileerror::groupnotfound">
+      <a href="../../GLib/KeyFileError/GroupNotFound.html">GroupNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/KeyFileError/InvalidValue" data-name="glib::keyfileerror::invalidvalue">
+      <a href="../../GLib/KeyFileError/InvalidValue.html">InvalidValue</a>
+      
+    </li>
+  
+  <li class=" current" data-id="javascriptcore/GLib/KeyFileError/KeyNotFound" data-name="glib::keyfileerror::keynotfound">
+      <a href="../../GLib/KeyFileError/KeyNotFound.html">KeyNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/KeyFileError/NotFound" data-name="glib::keyfileerror::notfound">
+      <a href="../../GLib/KeyFileError/NotFound.html">NotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/KeyFileError/Parse" data-name="glib::keyfileerror::parse">
+      <a href="../../GLib/KeyFileError/Parse.html">Parse</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/KeyFileError/UnknownEncoding" data-name="glib::keyfileerror::unknownencoding">
+      <a href="../../GLib/KeyFileError/UnknownEncoding.html">UnknownEncoding</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/KeyFileFlags" data-name="glib::keyfileflags">
+      <a href="../../GLib/KeyFileFlags.html">KeyFileFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/List" data-name="glib::list(t)">
+      <a href="../../GLib/List.html">List</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/LogLevelFlags" data-name="glib::loglevelflags">
+      <a href="../../GLib/LogLevelFlags.html">LogLevelFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/LogWriterOutput" data-name="glib::logwriteroutput">
+      <a href="../../GLib/LogWriterOutput.html">LogWriterOutput</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MainContext" data-name="glib::maincontext">
+      <a href="../../GLib/MainContext.html">MainContext</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MainContextFlags" data-name="glib::maincontextflags">
+      <a href="../../GLib/MainContextFlags.html">MainContextFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MainLoop" data-name="glib::mainloop">
+      <a href="../../GLib/MainLoop.html">MainLoop</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MappedFile" data-name="glib::mappedfile">
+      <a href="../../GLib/MappedFile.html">MappedFile</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupCollectType" data-name="glib::markupcollecttype">
+      <a href="../../GLib/MarkupCollectType.html">MarkupCollectType</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/MarkupError" data-name="glib::markuperror">
+      <a href="../../GLib/MarkupError.html">MarkupError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/BadUtf8" data-name="glib::markuperror::badutf8">
+      <a href="../../GLib/MarkupError/BadUtf8.html">BadUtf8</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/Empty" data-name="glib::markuperror::empty">
+      <a href="../../GLib/MarkupError/Empty.html">Empty</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/InvalidContent" data-name="glib::markuperror::invalidcontent">
+      <a href="../../GLib/MarkupError/InvalidContent.html">InvalidContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/MissingAttribute" data-name="glib::markuperror::missingattribute">
+      <a href="../../GLib/MarkupError/MissingAttribute.html">MissingAttribute</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/Parse" data-name="glib::markuperror::parse">
+      <a href="../../GLib/MarkupError/Parse.html">Parse</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/UnknownAttribute" data-name="glib::markuperror::unknownattribute">
+      <a href="../../GLib/MarkupError/UnknownAttribute.html">UnknownAttribute</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupError/UnknownElement" data-name="glib::markuperror::unknownelement">
+      <a href="../../GLib/MarkupError/UnknownElement.html">UnknownElement</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupParseContext" data-name="glib::markupparsecontext">
+      <a href="../../GLib/MarkupParseContext.html">MarkupParseContext</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupParseFlags" data-name="glib::markupparseflags">
+      <a href="../../GLib/MarkupParseFlags.html">MarkupParseFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/MarkupParser" data-name="glib::markupparser">
+      <a href="../../GLib/MarkupParser.html">MarkupParser</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/NormalizeMode" data-name="glib::normalizemode">
+      <a href="../../GLib/NormalizeMode.html">NormalizeMode</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/NumberParserError" data-name="glib::numberparsererror">
+      <a href="../../GLib/NumberParserError.html">NumberParserError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/NumberParserError/Invalid" data-name="glib::numberparsererror::invalid">
+      <a href="../../GLib/NumberParserError/Invalid.html">Invalid</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/NumberParserError/OutOfBounds" data-name="glib::numberparsererror::outofbounds">
+      <a href="../../GLib/NumberParserError/OutOfBounds.html">OutOfBounds</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/OnceStatus" data-name="glib::oncestatus">
+      <a href="../../GLib/OnceStatus.html">OnceStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/OptionArg" data-name="glib::optionarg">
+      <a href="../../GLib/OptionArg.html">OptionArg</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/OptionArgFunc" data-name="glib::optionargfunc">
+      <a href="../../GLib/OptionArgFunc.html">OptionArgFunc</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/OptionError" data-name="glib::optionerror">
+      <a href="../../GLib/OptionError.html">OptionError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/OptionError/BadValue" data-name="glib::optionerror::badvalue">
+      <a href="../../GLib/OptionError/BadValue.html">BadValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/OptionError/Failed" data-name="glib::optionerror::failed">
+      <a href="../../GLib/OptionError/Failed.html">Failed</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/OptionError/UnknownOption" data-name="glib::optionerror::unknownoption">
+      <a href="../../GLib/OptionError/UnknownOption.html">UnknownOption</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/OptionFlags" data-name="glib::optionflags">
+      <a href="../../GLib/OptionFlags.html">OptionFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/PrintFunc" data-name="glib::printfunc">
+      <a href="../../GLib/PrintFunc.html">PrintFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/Priority" data-name="glib::priority">
+      <a href="../../GLib/Priority.html">Priority</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexCompileFlags" data-name="glib::regexcompileflags">
+      <a href="../../GLib/RegexCompileFlags.html">RegexCompileFlags</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/RegexError" data-name="glib::regexerror">
+      <a href="../../GLib/RegexError.html">RegexError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/AssertionExpected" data-name="glib::regexerror::assertionexpected">
+      <a href="../../GLib/RegexError/AssertionExpected.html">AssertionExpected</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/BacktrackingControlVerbArgumentForbidden" data-name="glib::regexerror::backtrackingcontrolverbargumentforbidden">
+      <a href="../../GLib/RegexError/BacktrackingControlVerbArgumentForbidden.html">BacktrackingControlVerbArgumentForbidden</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/BacktrackingControlVerbArgumentRequired" data-name="glib::regexerror::backtrackingcontrolverbargumentrequired">
+      <a href="../../GLib/RegexError/BacktrackingControlVerbArgumentRequired.html">BacktrackingControlVerbArgumentRequired</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/CharacterValueTooLarge" data-name="glib::regexerror::charactervaluetoolarge">
+      <a href="../../GLib/RegexError/CharacterValueTooLarge.html">CharacterValueTooLarge</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/Compile" data-name="glib::regexerror::compile">
+      <a href="../../GLib/RegexError/Compile.html">Compile</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/DefineRepetion" data-name="glib::regexerror::definerepetion">
+      <a href="../../GLib/RegexError/DefineRepetion.html">DefineRepetion</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/DuplicateSubpatternName" data-name="glib::regexerror::duplicatesubpatternname">
+      <a href="../../GLib/RegexError/DuplicateSubpatternName.html">DuplicateSubpatternName</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/ExpressionTooLarge" data-name="glib::regexerror::expressiontoolarge">
+      <a href="../../GLib/RegexError/ExpressionTooLarge.html">ExpressionTooLarge</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/ExtraSubpatternName" data-name="glib::regexerror::extrasubpatternname">
+      <a href="../../GLib/RegexError/ExtraSubpatternName.html">ExtraSubpatternName</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/HexCodeTooLarge" data-name="glib::regexerror::hexcodetoolarge">
+      <a href="../../GLib/RegexError/HexCodeTooLarge.html">HexCodeTooLarge</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InconsistentNewlineOptions" data-name="glib::regexerror::inconsistentnewlineoptions">
+      <a href="../../GLib/RegexError/InconsistentNewlineOptions.html">InconsistentNewlineOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InexistentSubpatternReference" data-name="glib::regexerror::inexistentsubpatternreference">
+      <a href="../../GLib/RegexError/InexistentSubpatternReference.html">InexistentSubpatternReference</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InfiniteLoop" data-name="glib::regexerror::infiniteloop">
+      <a href="../../GLib/RegexError/InfiniteLoop.html">InfiniteLoop</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/Internal" data-name="glib::regexerror::internal">
+      <a href="../../GLib/RegexError/Internal.html">Internal</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InvalidCondition" data-name="glib::regexerror::invalidcondition">
+      <a href="../../GLib/RegexError/InvalidCondition.html">InvalidCondition</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InvalidControlChar" data-name="glib::regexerror::invalidcontrolchar">
+      <a href="../../GLib/RegexError/InvalidControlChar.html">InvalidControlChar</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InvalidDataCharacter" data-name="glib::regexerror::invaliddatacharacter">
+      <a href="../../GLib/RegexError/InvalidDataCharacter.html">InvalidDataCharacter</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InvalidEscapeInCharacterClass" data-name="glib::regexerror::invalidescapeincharacterclass">
+      <a href="../../GLib/RegexError/InvalidEscapeInCharacterClass.html">InvalidEscapeInCharacterClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InvalidOctalValue" data-name="glib::regexerror::invalidoctalvalue">
+      <a href="../../GLib/RegexError/InvalidOctalValue.html">InvalidOctalValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/InvalidRelativeReference" data-name="glib::regexerror::invalidrelativereference">
+      <a href="../../GLib/RegexError/InvalidRelativeReference.html">InvalidRelativeReference</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MalformedCondition" data-name="glib::regexerror::malformedcondition">
+      <a href="../../GLib/RegexError/MalformedCondition.html">MalformedCondition</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MalformedProperty" data-name="glib::regexerror::malformedproperty">
+      <a href="../../GLib/RegexError/MalformedProperty.html">MalformedProperty</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/Match" data-name="glib::regexerror::match">
+      <a href="../../GLib/RegexError/Match.html">Match</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MemoryError" data-name="glib::regexerror::memoryerror">
+      <a href="../../GLib/RegexError/MemoryError.html">MemoryError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MissingBackReference" data-name="glib::regexerror::missingbackreference">
+      <a href="../../GLib/RegexError/MissingBackReference.html">MissingBackReference</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MissingControlChar" data-name="glib::regexerror::missingcontrolchar">
+      <a href="../../GLib/RegexError/MissingControlChar.html">MissingControlChar</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MissingDigit" data-name="glib::regexerror::missingdigit">
+      <a href="../../GLib/RegexError/MissingDigit.html">MissingDigit</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MissingName" data-name="glib::regexerror::missingname">
+      <a href="../../GLib/RegexError/MissingName.html">MissingName</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MissingSubpatternName" data-name="glib::regexerror::missingsubpatternname">
+      <a href="../../GLib/RegexError/MissingSubpatternName.html">MissingSubpatternName</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/MissingSubpatternNameTerminator" data-name="glib::regexerror::missingsubpatternnameterminator">
+      <a href="../../GLib/RegexError/MissingSubpatternNameTerminator.html">MissingSubpatternNameTerminator</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/NameTooLong" data-name="glib::regexerror::nametoolong">
+      <a href="../../GLib/RegexError/NameTooLong.html">NameTooLong</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/NothingToRepeat" data-name="glib::regexerror::nothingtorepeat">
+      <a href="../../GLib/RegexError/NothingToRepeat.html">NothingToRepeat</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/NotSupportedInClass" data-name="glib::regexerror::notsupportedinclass">
+      <a href="../../GLib/RegexError/NotSupportedInClass.html">NotSupportedInClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/NumberTooBig" data-name="glib::regexerror::numbertoobig">
+      <a href="../../GLib/RegexError/NumberTooBig.html">NumberTooBig</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/Optimize" data-name="glib::regexerror::optimize">
+      <a href="../../GLib/RegexError/Optimize.html">Optimize</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/PosixCollatingElementsNotSupported" data-name="glib::regexerror::posixcollatingelementsnotsupported">
+      <a href="../../GLib/RegexError/PosixCollatingElementsNotSupported.html">PosixCollatingElementsNotSupported</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/PosixNamedClassOutsideClass" data-name="glib::regexerror::posixnamedclassoutsideclass">
+      <a href="../../GLib/RegexError/PosixNamedClassOutsideClass.html">PosixNamedClassOutsideClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/QuantifiersOutOfOrder" data-name="glib::regexerror::quantifiersoutoforder">
+      <a href="../../GLib/RegexError/QuantifiersOutOfOrder.html">QuantifiersOutOfOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/QuantifierTooBig" data-name="glib::regexerror::quantifiertoobig">
+      <a href="../../GLib/RegexError/QuantifierTooBig.html">QuantifierTooBig</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/RangeOutOfOrder" data-name="glib::regexerror::rangeoutoforder">
+      <a href="../../GLib/RegexError/RangeOutOfOrder.html">RangeOutOfOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/Replace" data-name="glib::regexerror::replace">
+      <a href="../../GLib/RegexError/Replace.html">Replace</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/SingleByteMatchInLookbehind" data-name="glib::regexerror::singlebytematchinlookbehind">
+      <a href="../../GLib/RegexError/SingleByteMatchInLookbehind.html">SingleByteMatchInLookbehind</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/StrayBackslash" data-name="glib::regexerror::straybackslash">
+      <a href="../../GLib/RegexError/StrayBackslash.html">StrayBackslash</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/SubpatternNameTooLong" data-name="glib::regexerror::subpatternnametoolong">
+      <a href="../../GLib/RegexError/SubpatternNameTooLong.html">SubpatternNameTooLong</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/TooManyBranchesInDefine" data-name="glib::regexerror::toomanybranchesindefine">
+      <a href="../../GLib/RegexError/TooManyBranchesInDefine.html">TooManyBranchesInDefine</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/TooManyConditionalBranches" data-name="glib::regexerror::toomanyconditionalbranches">
+      <a href="../../GLib/RegexError/TooManyConditionalBranches.html">TooManyConditionalBranches</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/TooManyForwardReferences" data-name="glib::regexerror::toomanyforwardreferences">
+      <a href="../../GLib/RegexError/TooManyForwardReferences.html">TooManyForwardReferences</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/TooManySubpatterns" data-name="glib::regexerror::toomanysubpatterns">
+      <a href="../../GLib/RegexError/TooManySubpatterns.html">TooManySubpatterns</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnknownBacktrackingControlVerb" data-name="glib::regexerror::unknownbacktrackingcontrolverb">
+      <a href="../../GLib/RegexError/UnknownBacktrackingControlVerb.html">UnknownBacktrackingControlVerb</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnknownPosixClassName" data-name="glib::regexerror::unknownposixclassname">
+      <a href="../../GLib/RegexError/UnknownPosixClassName.html">UnknownPosixClassName</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnknownProperty" data-name="glib::regexerror::unknownproperty">
+      <a href="../../GLib/RegexError/UnknownProperty.html">UnknownProperty</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnmatchedParenthesis" data-name="glib::regexerror::unmatchedparenthesis">
+      <a href="../../GLib/RegexError/UnmatchedParenthesis.html">UnmatchedParenthesis</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnrecognizedCharacter" data-name="glib::regexerror::unrecognizedcharacter">
+      <a href="../../GLib/RegexError/UnrecognizedCharacter.html">UnrecognizedCharacter</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnrecognizedEscape" data-name="glib::regexerror::unrecognizedescape">
+      <a href="../../GLib/RegexError/UnrecognizedEscape.html">UnrecognizedEscape</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnterminatedCharacterClass" data-name="glib::regexerror::unterminatedcharacterclass">
+      <a href="../../GLib/RegexError/UnterminatedCharacterClass.html">UnterminatedCharacterClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/UnterminatedComment" data-name="glib::regexerror::unterminatedcomment">
+      <a href="../../GLib/RegexError/UnterminatedComment.html">UnterminatedComment</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexError/VariableLengthLookbehind" data-name="glib::regexerror::variablelengthlookbehind">
+      <a href="../../GLib/RegexError/VariableLengthLookbehind.html">VariableLengthLookbehind</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/RegexMatchFlags" data-name="glib::regexmatchflags">
+      <a href="../../GLib/RegexMatchFlags.html">RegexMatchFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SeekType" data-name="glib::seektype">
+      <a href="../../GLib/SeekType.html">SeekType</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/ShellError" data-name="glib::shellerror">
+      <a href="../../GLib/ShellError.html">ShellError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/ShellError/BadQuoting" data-name="glib::shellerror::badquoting">
+      <a href="../../GLib/ShellError/BadQuoting.html">BadQuoting</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ShellError/EmptyString" data-name="glib::shellerror::emptystring">
+      <a href="../../GLib/ShellError/EmptyString.html">EmptyString</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ShellError/Failed" data-name="glib::shellerror::failed">
+      <a href="../../GLib/ShellError/Failed.html">Failed</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SliceConfig" data-name="glib::sliceconfig">
+      <a href="../../GLib/SliceConfig.html">SliceConfig</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SList" data-name="glib::slist(t)">
+      <a href="../../GLib/SList.html">SList</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/Source" data-name="glib::source">
+      <a href="../../GLib/Source.html">Source</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SourceCallbackFuncs" data-name="glib::sourcecallbackfuncs">
+      <a href="../../GLib/SourceCallbackFuncs.html">SourceCallbackFuncs</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SourceDisposeFunc" data-name="glib::sourcedisposefunc">
+      <a href="../../GLib/SourceDisposeFunc.html">SourceDisposeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SourceDummyMarshal" data-name="glib::sourcedummymarshal">
+      <a href="../../GLib/SourceDummyMarshal.html">SourceDummyMarshal</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SourceFunc" data-name="glib::sourcefunc">
+      <a href="../../GLib/SourceFunc.html">SourceFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SourceFuncs" data-name="glib::sourcefuncs">
+      <a href="../../GLib/SourceFuncs.html">SourceFuncs</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnChildSetupFunc" data-name="glib::spawnchildsetupfunc">
+      <a href="../../GLib/SpawnChildSetupFunc.html">SpawnChildSetupFunc</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/SpawnError" data-name="glib::spawnerror">
+      <a href="../../GLib/SpawnError.html">SpawnError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Acces" data-name="glib::spawnerror::acces">
+      <a href="../../GLib/SpawnError/Acces.html">Acces</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Chdir" data-name="glib::spawnerror::chdir">
+      <a href="../../GLib/SpawnError/Chdir.html">Chdir</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Failed" data-name="glib::spawnerror::failed">
+      <a href="../../GLib/SpawnError/Failed.html">Failed</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Fork" data-name="glib::spawnerror::fork">
+      <a href="../../GLib/SpawnError/Fork.html">Fork</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/G2big" data-name="glib::spawnerror::g2big">
+      <a href="../../GLib/SpawnError/G2big.html">G2big</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Inval" data-name="glib::spawnerror::inval">
+      <a href="../../GLib/SpawnError/Inval.html">Inval</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Io" data-name="glib::spawnerror::io">
+      <a href="../../GLib/SpawnError/Io.html">Io</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Isdir" data-name="glib::spawnerror::isdir">
+      <a href="../../GLib/SpawnError/Isdir.html">Isdir</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Libbad" data-name="glib::spawnerror::libbad">
+      <a href="../../GLib/SpawnError/Libbad.html">Libbad</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Loop" data-name="glib::spawnerror::loop">
+      <a href="../../GLib/SpawnError/Loop.html">Loop</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Mfile" data-name="glib::spawnerror::mfile">
+      <a href="../../GLib/SpawnError/Mfile.html">Mfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Nametoolong" data-name="glib::spawnerror::nametoolong">
+      <a href="../../GLib/SpawnError/Nametoolong.html">Nametoolong</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Nfile" data-name="glib::spawnerror::nfile">
+      <a href="../../GLib/SpawnError/Nfile.html">Nfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Noent" data-name="glib::spawnerror::noent">
+      <a href="../../GLib/SpawnError/Noent.html">Noent</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Noexec" data-name="glib::spawnerror::noexec">
+      <a href="../../GLib/SpawnError/Noexec.html">Noexec</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Nomem" data-name="glib::spawnerror::nomem">
+      <a href="../../GLib/SpawnError/Nomem.html">Nomem</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Notdir" data-name="glib::spawnerror::notdir">
+      <a href="../../GLib/SpawnError/Notdir.html">Notdir</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Perm" data-name="glib::spawnerror::perm">
+      <a href="../../GLib/SpawnError/Perm.html">Perm</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Read" data-name="glib::spawnerror::read">
+      <a href="../../GLib/SpawnError/Read.html">Read</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/TooBig" data-name="glib::spawnerror::toobig">
+      <a href="../../GLib/SpawnError/TooBig.html">TooBig</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnError/Txtbusy" data-name="glib::spawnerror::txtbusy">
+      <a href="../../GLib/SpawnError/Txtbusy.html">Txtbusy</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/SpawnFlags" data-name="glib::spawnflags">
+      <a href="../../GLib/SpawnFlags.html">SpawnFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestDataFunc" data-name="glib::testdatafunc">
+      <a href="../../GLib/TestDataFunc.html">TestDataFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestFileType" data-name="glib::testfiletype">
+      <a href="../../GLib/TestFileType.html">TestFileType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestFixtureFunc" data-name="glib::testfixturefunc">
+      <a href="../../GLib/TestFixtureFunc.html">TestFixtureFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestFunc" data-name="glib::testfunc">
+      <a href="../../GLib/TestFunc.html">TestFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestLogFatalFunc" data-name="glib::testlogfatalfunc">
+      <a href="../../GLib/TestLogFatalFunc.html">TestLogFatalFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestLogType" data-name="glib::testlogtype">
+      <a href="../../GLib/TestLogType.html">TestLogType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestResult" data-name="glib::testresult">
+      <a href="../../GLib/TestResult.html">TestResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestSubprocessFlags" data-name="glib::testsubprocessflags">
+      <a href="../../GLib/TestSubprocessFlags.html">TestSubprocessFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TestTrapFlags" data-name="glib::testtrapflags">
+      <a href="../../GLib/TestTrapFlags.html">TestTrapFlags</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/ThreadError" data-name="glib::threaderror">
+      <a href="../../GLib/ThreadError.html">ThreadError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/ThreadError/ThreadErrorAgain" data-name="glib::threaderror::threaderroragain">
+      <a href="../../GLib/ThreadError/ThreadErrorAgain.html">ThreadErrorAgain</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/ThreadFunc" data-name="glib::threadfunc">
+      <a href="../../GLib/ThreadFunc.html">ThreadFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TimeType" data-name="glib::timetype">
+      <a href="../../GLib/TimeType.html">TimeType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TokenType" data-name="glib::tokentype">
+      <a href="../../GLib/TokenType.html">TokenType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TranslateFunc" data-name="glib::translatefunc">
+      <a href="../../GLib/TranslateFunc.html">TranslateFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TraverseFlags" data-name="glib::traverseflags">
+      <a href="../../GLib/TraverseFlags.html">TraverseFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TraverseFunc" data-name="glib::traversefunc">
+      <a href="../../GLib/TraverseFunc.html">TraverseFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/TraverseType" data-name="glib::traversetype">
+      <a href="../../GLib/TraverseType.html">TraverseType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UnicodeBreakType" data-name="glib::unicodebreaktype">
+      <a href="../../GLib/UnicodeBreakType.html">UnicodeBreakType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UnicodeScript" data-name="glib::unicodescript">
+      <a href="../../GLib/UnicodeScript.html">UnicodeScript</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UnicodeType" data-name="glib::unicodetype">
+      <a href="../../GLib/UnicodeType.html">UnicodeType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UnixFDSourceFunc" data-name="glib::unixfdsourcefunc">
+      <a href="../../GLib/UnixFDSourceFunc.html">UnixFDSourceFunc</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/UriError" data-name="glib::urierror">
+      <a href="../../GLib/UriError.html">UriError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadAuthParams" data-name="glib::urierror::badauthparams">
+      <a href="../../GLib/UriError/BadAuthParams.html">BadAuthParams</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadFragment" data-name="glib::urierror::badfragment">
+      <a href="../../GLib/UriError/BadFragment.html">BadFragment</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadHost" data-name="glib::urierror::badhost">
+      <a href="../../GLib/UriError/BadHost.html">BadHost</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadPassword" data-name="glib::urierror::badpassword">
+      <a href="../../GLib/UriError/BadPassword.html">BadPassword</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadPath" data-name="glib::urierror::badpath">
+      <a href="../../GLib/UriError/BadPath.html">BadPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadPort" data-name="glib::urierror::badport">
+      <a href="../../GLib/UriError/BadPort.html">BadPort</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadQuery" data-name="glib::urierror::badquery">
+      <a href="../../GLib/UriError/BadQuery.html">BadQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadScheme" data-name="glib::urierror::badscheme">
+      <a href="../../GLib/UriError/BadScheme.html">BadScheme</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/BadUser" data-name="glib::urierror::baduser">
+      <a href="../../GLib/UriError/BadUser.html">BadUser</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriError/Failed" data-name="glib::urierror::failed">
+      <a href="../../GLib/UriError/Failed.html">Failed</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriFlags" data-name="glib::uriflags">
+      <a href="../../GLib/UriFlags.html">UriFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriHideFlags" data-name="glib::urihideflags">
+      <a href="../../GLib/UriHideFlags.html">UriHideFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UriParamsFlags" data-name="glib::uriparamsflags">
+      <a href="../../GLib/UriParamsFlags.html">UriParamsFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/UserDirectory" data-name="glib::userdirectory">
+      <a href="../../GLib/UserDirectory.html">UserDirectory</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/Variant" data-name="glib::variant">
+      <a href="../../GLib/Variant.html">Variant</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantBuilder" data-name="glib::variantbuilder">
+      <a href="../../GLib/VariantBuilder.html">VariantBuilder</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantClass" data-name="glib::variantclass">
+      <a href="../../GLib/VariantClass.html">VariantClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantDict" data-name="glib::variantdict">
+      <a href="../../GLib/VariantDict.html">VariantDict</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GLib/VariantParseError" data-name="glib::variantparseerror">
+      <a href="../../GLib/VariantParseError.html">VariantParseError</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/BasicTypeExpected" data-name="glib::variantparseerror::basictypeexpected">
+      <a href="../../GLib/VariantParseError/BasicTypeExpected.html">BasicTypeExpected</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/CannotInferType" data-name="glib::variantparseerror::cannotinfertype">
+      <a href="../../GLib/VariantParseError/CannotInferType.html">CannotInferType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/DefiniteTypeExpected" data-name="glib::variantparseerror::definitetypeexpected">
+      <a href="../../GLib/VariantParseError/DefiniteTypeExpected.html">DefiniteTypeExpected</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/Failed" data-name="glib::variantparseerror::failed">
+      <a href="../../GLib/VariantParseError/Failed.html">Failed</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/InputNotAtEnd" data-name="glib::variantparseerror::inputnotatend">
+      <a href="../../GLib/VariantParseError/InputNotAtEnd.html">InputNotAtEnd</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/InvalidCharacter" data-name="glib::variantparseerror::invalidcharacter">
+      <a href="../../GLib/VariantParseError/InvalidCharacter.html">InvalidCharacter</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/InvalidFormatString" data-name="glib::variantparseerror::invalidformatstring">
+      <a href="../../GLib/VariantParseError/InvalidFormatString.html">InvalidFormatString</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/InvalidObjectPath" data-name="glib::variantparseerror::invalidobjectpath">
+      <a href="../../GLib/VariantParseError/InvalidObjectPath.html">InvalidObjectPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/InvalidSignature" data-name="glib::variantparseerror::invalidsignature">
+      <a href="../../GLib/VariantParseError/InvalidSignature.html">InvalidSignature</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/InvalidTypeString" data-name="glib::variantparseerror::invalidtypestring">
+      <a href="../../GLib/VariantParseError/InvalidTypeString.html">InvalidTypeString</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/NoCommonType" data-name="glib::variantparseerror::nocommontype">
+      <a href="../../GLib/VariantParseError/NoCommonType.html">NoCommonType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/NumberOutOfRange" data-name="glib::variantparseerror::numberoutofrange">
+      <a href="../../GLib/VariantParseError/NumberOutOfRange.html">NumberOutOfRange</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/NumberTooBig" data-name="glib::variantparseerror::numbertoobig">
+      <a href="../../GLib/VariantParseError/NumberTooBig.html">NumberTooBig</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/Recursion" data-name="glib::variantparseerror::recursion">
+      <a href="../../GLib/VariantParseError/Recursion.html">Recursion</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/TypeError" data-name="glib::variantparseerror::typeerror">
+      <a href="../../GLib/VariantParseError/TypeError.html">TypeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/UnexpectedToken" data-name="glib::variantparseerror::unexpectedtoken">
+      <a href="../../GLib/VariantParseError/UnexpectedToken.html">UnexpectedToken</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/UnknownKeyword" data-name="glib::variantparseerror::unknownkeyword">
+      <a href="../../GLib/VariantParseError/UnknownKeyword.html">UnknownKeyword</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/UnterminatedStringConstant" data-name="glib::variantparseerror::unterminatedstringconstant">
+      <a href="../../GLib/VariantParseError/UnterminatedStringConstant.html">UnterminatedStringConstant</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantParseError/ValueExpected" data-name="glib::variantparseerror::valueexpected">
+      <a href="../../GLib/VariantParseError/ValueExpected.html">ValueExpected</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VariantType" data-name="glib::varianttype">
+      <a href="../../GLib/VariantType.html">VariantType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GLib/VoidFunc" data-name="glib::voidfunc">
+      <a href="../../GLib/VoidFunc.html">VoidFunc</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GObject" data-name="gobject">
+      <a href="../../GObject.html">GObject</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GObject/BaseFinalizeFunc" data-name="gobject::basefinalizefunc">
+      <a href="../../GObject/BaseFinalizeFunc.html">BaseFinalizeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/BaseInitFunc" data-name="gobject::baseinitfunc">
+      <a href="../../GObject/BaseInitFunc.html">BaseInitFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Binding" data-name="gobject::binding">
+      <a href="../../GObject/Binding.html">Binding</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/BindingFlags" data-name="gobject::bindingflags">
+      <a href="../../GObject/BindingFlags.html">BindingFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/BindingGroup" data-name="gobject::bindinggroup">
+      <a href="../../GObject/BindingGroup.html">BindingGroup</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/BindingTransformFunc" data-name="gobject::bindingtransformfunc">
+      <a href="../../GObject/BindingTransformFunc.html">BindingTransformFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/BoxedCopyFunc" data-name="gobject::boxedcopyfunc">
+      <a href="../../GObject/BoxedCopyFunc.html">BoxedCopyFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/BoxedFreeFunc" data-name="gobject::boxedfreefunc">
+      <a href="../../GObject/BoxedFreeFunc.html">BoxedFreeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Callback" data-name="gobject::callback">
+      <a href="../../GObject/Callback.html">Callback</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/CClosure" data-name="gobject::cclosure">
+      <a href="../../GObject/CClosure.html">CClosure</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ClassFinalizeFunc" data-name="gobject::classfinalizefunc">
+      <a href="../../GObject/ClassFinalizeFunc.html">ClassFinalizeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ClassInitFunc" data-name="gobject::classinitfunc">
+      <a href="../../GObject/ClassInitFunc.html">ClassInitFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Closure" data-name="gobject::closure">
+      <a href="../../GObject/Closure.html">Closure</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ClosureMarshal" data-name="gobject::closuremarshal">
+      <a href="../../GObject/ClosureMarshal.html">ClosureMarshal</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ClosureNotify" data-name="gobject::closurenotify">
+      <a href="../../GObject/ClosureNotify.html">ClosureNotify</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ClosureNotifyData" data-name="gobject::closurenotifydata">
+      <a href="../../GObject/ClosureNotifyData.html">ClosureNotifyData</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ConnectFlags" data-name="gobject::connectflags">
+      <a href="../../GObject/ConnectFlags.html">ConnectFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/EnumClass" data-name="gobject::enumclass">
+      <a href="../../GObject/EnumClass.html">EnumClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/EnumValue" data-name="gobject::enumvalue">
+      <a href="../../GObject/EnumValue.html">EnumValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/FlagsClass" data-name="gobject::flagsclass">
+      <a href="../../GObject/FlagsClass.html">FlagsClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/FlagsValue" data-name="gobject::flagsvalue">
+      <a href="../../GObject/FlagsValue.html">FlagsValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/GObjectError" data-name="gobject::gobjecterror">
+      <a href="../../GObject/GObjectError.html">GObjectError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/InitiallyUnowned" data-name="gobject::initiallyunowned">
+      <a href="../../GObject/InitiallyUnowned.html">InitiallyUnowned</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/InstanceInitFunc" data-name="gobject::instanceinitfunc">
+      <a href="../../GObject/InstanceInitFunc.html">InstanceInitFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/InterfaceFinalizeFunc" data-name="gobject::interfacefinalizefunc">
+      <a href="../../GObject/InterfaceFinalizeFunc.html">InterfaceFinalizeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/InterfaceInfo" data-name="gobject::interfaceinfo">
+      <a href="../../GObject/InterfaceInfo.html">InterfaceInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/InterfaceInitFunc" data-name="gobject::interfaceinitfunc">
+      <a href="../../GObject/InterfaceInitFunc.html">InterfaceInitFunc</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GObject/Object" data-name="gobject::object">
+      <a href="../../GObject/Object.html">Object</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GObject/Object/NotifySignal" data-name="gobject::object::notifysignal">
+      <a href="../../GObject/Object/NotifySignal.html">NotifySignal</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ObjectConstructParam" data-name="gobject::objectconstructparam">
+      <a href="../../GObject/ObjectConstructParam.html">ObjectConstructParam</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ObjectFinalizeFunc" data-name="gobject::objectfinalizefunc">
+      <a href="../../GObject/ObjectFinalizeFunc.html">ObjectFinalizeFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ObjectGetPropertyFunc" data-name="gobject::objectgetpropertyfunc">
+      <a href="../../GObject/ObjectGetPropertyFunc.html">ObjectGetPropertyFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ObjectSetPropertyFunc" data-name="gobject::objectsetpropertyfunc">
+      <a href="../../GObject/ObjectSetPropertyFunc.html">ObjectSetPropertyFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Parameter" data-name="gobject::parameter">
+      <a href="../../GObject/Parameter.html">Parameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ParamFlags" data-name="gobject::paramflags">
+      <a href="../../GObject/ParamFlags.html">ParamFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ParamSpec" data-name="gobject::paramspec">
+      <a href="../../GObject/ParamSpec.html">ParamSpec</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ParamSpecPool" data-name="gobject::paramspecpool">
+      <a href="../../GObject/ParamSpecPool.html">ParamSpecPool</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Signal" data-name="gobject::signal">
+      <a href="../../GObject/Signal.html">Signal</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalAccumulator" data-name="gobject::signalaccumulator">
+      <a href="../../GObject/SignalAccumulator.html">SignalAccumulator</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalConnection" data-name="gobject::signalconnection">
+      <a href="../../GObject/SignalConnection.html">SignalConnection</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalEmissionHook" data-name="gobject::signalemissionhook">
+      <a href="../../GObject/SignalEmissionHook.html">SignalEmissionHook</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalFlags" data-name="gobject::signalflags">
+      <a href="../../GObject/SignalFlags.html">SignalFlags</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/GObject/SignalGroup" data-name="gobject::signalgroup">
+      <a href="../../GObject/SignalGroup.html">SignalGroup</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalGroup/BindSignal" data-name="gobject::signalgroup::bindsignal">
+      <a href="../../GObject/SignalGroup/BindSignal.html">BindSignal</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalGroup/UnbindSignal" data-name="gobject::signalgroup::unbindsignal">
+      <a href="../../GObject/SignalGroup/UnbindSignal.html">UnbindSignal</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalInvocationHint" data-name="gobject::signalinvocationhint">
+      <a href="../../GObject/SignalInvocationHint.html">SignalInvocationHint</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/SignalMatchType" data-name="gobject::signalmatchtype">
+      <a href="../../GObject/SignalMatchType.html">SignalMatchType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ToggleNotify" data-name="gobject::togglenotify">
+      <a href="../../GObject/ToggleNotify.html">ToggleNotify</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeClass" data-name="gobject::typeclass">
+      <a href="../../GObject/TypeClass.html">TypeClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeClassCacheFunc" data-name="gobject::typeclasscachefunc">
+      <a href="../../GObject/TypeClassCacheFunc.html">TypeClassCacheFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeDebugFlags" data-name="gobject::typedebugflags">
+      <a href="../../GObject/TypeDebugFlags.html">TypeDebugFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeFlags" data-name="gobject::typeflags">
+      <a href="../../GObject/TypeFlags.html">TypeFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeFundamentalFlags" data-name="gobject::typefundamentalflags">
+      <a href="../../GObject/TypeFundamentalFlags.html">TypeFundamentalFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeFundamentalInfo" data-name="gobject::typefundamentalinfo">
+      <a href="../../GObject/TypeFundamentalInfo.html">TypeFundamentalInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeInfo" data-name="gobject::typeinfo">
+      <a href="../../GObject/TypeInfo.html">TypeInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeInstance" data-name="gobject::typeinstance">
+      <a href="../../GObject/TypeInstance.html">TypeInstance</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeInterface" data-name="gobject::typeinterface">
+      <a href="../../GObject/TypeInterface.html">TypeInterface</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeInterfaceCheckFunc" data-name="gobject::typeinterfacecheckfunc">
+      <a href="../../GObject/TypeInterfaceCheckFunc.html">TypeInterfaceCheckFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeModule" data-name="gobject::typemodule">
+      <a href="../../GObject/TypeModule.html">TypeModule</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypePlugin" data-name="gobject::typeplugin">
+      <a href="../../GObject/TypePlugin.html">TypePlugin</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypePluginClass" data-name="gobject::typepluginclass">
+      <a href="../../GObject/TypePluginClass.html">TypePluginClass</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypePluginCompleteInterfaceInfo" data-name="gobject::typeplugincompleteinterfaceinfo">
+      <a href="../../GObject/TypePluginCompleteInterfaceInfo.html">TypePluginCompleteInterfaceInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypePluginCompleteTypeInfo" data-name="gobject::typeplugincompletetypeinfo">
+      <a href="../../GObject/TypePluginCompleteTypeInfo.html">TypePluginCompleteTypeInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypePluginUnuse" data-name="gobject::typepluginunuse">
+      <a href="../../GObject/TypePluginUnuse.html">TypePluginUnuse</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypePluginUse" data-name="gobject::typepluginuse">
+      <a href="../../GObject/TypePluginUse.html">TypePluginUse</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeQuery" data-name="gobject::typequery">
+      <a href="../../GObject/TypeQuery.html">TypeQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/TypeValueTable" data-name="gobject::typevaluetable">
+      <a href="../../GObject/TypeValueTable.html">TypeValueTable</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Value" data-name="gobject::value">
+      <a href="../../GObject/Value.html">Value</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ValueArray" data-name="gobject::valuearray">
+      <a href="../../GObject/ValueArray.html">ValueArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/ValueTransform" data-name="gobject::valuetransform">
+      <a href="../../GObject/ValueTransform.html">ValueTransform</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/Virtual" data-name="gobject::virtual">
+      <a href="../../GObject/Virtual.html">Virtual</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/GObject/WeakNotify" data-name="gobject::weaknotify">
+      <a href="../../GObject/WeakNotify.html">WeakNotify</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/Int32" data-name="int32">
+      <a href="../../Int32.html">Int32</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/Int64" data-name="int64">
+      <a href="../../Int64.html">Int64</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/Int8" data-name="int8">
+      <a href="../../Int8.html">Int8</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/JavaScriptCore" data-name="javascriptcore">
+      <a href="../../JavaScriptCore.html">JavaScriptCore</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/CheckSyntaxMode" data-name="javascriptcore::checksyntaxmode">
+      <a href="../../JavaScriptCore/CheckSyntaxMode.html">CheckSyntaxMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/CheckSyntaxResult" data-name="javascriptcore::checksyntaxresult">
+      <a href="../../JavaScriptCore/CheckSyntaxResult.html">CheckSyntaxResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/Class" data-name="javascriptcore::class">
+      <a href="../../JavaScriptCore/Class.html">Class</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ClassDeletePropertyFunction" data-name="javascriptcore::classdeletepropertyfunction">
+      <a href="../../JavaScriptCore/ClassDeletePropertyFunction.html">ClassDeletePropertyFunction</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ClassEnumeratePropertiesFunction" data-name="javascriptcore::classenumeratepropertiesfunction">
+      <a href="../../JavaScriptCore/ClassEnumeratePropertiesFunction.html">ClassEnumeratePropertiesFunction</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ClassGetPropertyFunction" data-name="javascriptcore::classgetpropertyfunction">
+      <a href="../../JavaScriptCore/ClassGetPropertyFunction.html">ClassGetPropertyFunction</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ClassHasPropertyFunction" data-name="javascriptcore::classhaspropertyfunction">
+      <a href="../../JavaScriptCore/ClassHasPropertyFunction.html">ClassHasPropertyFunction</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ClassSetPropertyFunction" data-name="javascriptcore::classsetpropertyfunction">
+      <a href="../../JavaScriptCore/ClassSetPropertyFunction.html">ClassSetPropertyFunction</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ClassVTable" data-name="javascriptcore::classvtable">
+      <a href="../../JavaScriptCore/ClassVTable.html">ClassVTable</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/Context" data-name="javascriptcore::context">
+      <a href="../../JavaScriptCore/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ContextPrivate" data-name="javascriptcore::contextprivate">
+      <a href="../../JavaScriptCore/ContextPrivate.html">ContextPrivate</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/Exception" data-name="javascriptcore::exception">
+      <a href="../../JavaScriptCore/Exception.html">Exception</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ExceptionHandler" data-name="javascriptcore::exceptionhandler">
+      <a href="../../JavaScriptCore/ExceptionHandler.html">ExceptionHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ExceptionPrivate" data-name="javascriptcore::exceptionprivate">
+      <a href="../../JavaScriptCore/ExceptionPrivate.html">ExceptionPrivate</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/JavaScriptCoreError" data-name="javascriptcore::javascriptcoreerror">
+      <a href="../../JavaScriptCore/JavaScriptCoreError.html">JavaScriptCoreError</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/OptionsFunc" data-name="javascriptcore::optionsfunc">
+      <a href="../../JavaScriptCore/OptionsFunc.html">OptionsFunc</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/OptionType" data-name="javascriptcore::optiontype">
+      <a href="../../JavaScriptCore/OptionType.html">OptionType</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/Value" data-name="javascriptcore::value">
+      <a href="../../JavaScriptCore/Value.html">Value</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ValuePrivate" data-name="javascriptcore::valueprivate">
+      <a href="../../JavaScriptCore/ValuePrivate.html">ValuePrivate</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/ValuePropertyFlags" data-name="javascriptcore::valuepropertyflags">
+      <a href="../../JavaScriptCore/ValuePropertyFlags.html">ValuePropertyFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/VirtualMachine" data-name="javascriptcore::virtualmachine">
+      <a href="../../JavaScriptCore/VirtualMachine.html">VirtualMachine</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/VirtualMachinePrivate" data-name="javascriptcore::virtualmachineprivate">
+      <a href="../../JavaScriptCore/VirtualMachinePrivate.html">VirtualMachinePrivate</a>
+      
+    </li>
+  
+  <li class="parent " data-id="javascriptcore/JavaScriptCore/WeakValue" data-name="javascriptcore::weakvalue">
+      <a href="../../JavaScriptCore/WeakValue.html">WeakValue</a>
+      
+        <ul>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/WeakValue/ClearedSignal" data-name="javascriptcore::weakvalue::clearedsignal">
+      <a href="../../JavaScriptCore/WeakValue/ClearedSignal.html">ClearedSignal</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/JavaScriptCore/WeakValuePrivate" data-name="javascriptcore::weakvalueprivate">
+      <a href="../../JavaScriptCore/WeakValuePrivate.html">WeakValuePrivate</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/String" data-name="string">
+      <a href="../../String.html">String</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/UInt32" data-name="uint32">
+      <a href="../../UInt32.html">UInt32</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/UInt64" data-name="uint64">
+      <a href="../../UInt64.html">UInt64</a>
+      
+    </li>
+  
+  <li class=" " data-id="javascriptcore/UInt8" data-name="uint8">
+      <a href="../../UInt8.html">UInt8</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> GLib::KeyFileError::KeyNotFound
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../GLib/KeyFileError/KeyNotFound.html">GLib::KeyFileError::KeyNotFound</a></li><li class="superclass"><a href="../../GLib/KeyFileError.html">GLib::KeyFileError</a></li><li class="superclass"><a href="../../GLib/GLibError.html">GLib::GLibError</a></li><li class="superclass"><a href="../../GLib/Error.html">GLib::Error</a></li><li class="superclass">RuntimeError</li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      lib/gi-crystal/src/auto/g_lib-2.0/g_lib.cr
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28pointer%3APointer%28LibGLib%3A%3AError%29%2Ctransfer%3AGICrystal%3A%3ATransfer%29-class-method" class="signature"><strong>.new</strong>(pointer : Pointer(LibGLib::Error), transfer : GICrystal::Transfer)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28message%3AString%3D%22%22%29-class-method" class="signature"><strong>.new</strong>(message : String = <span class="s">&quot;&quot;</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../GLib/Error.html">GLib::Error</a></code></h3>
+  
+  
+    <a href="../../GLib/Error.html#code%3AInt32-instance-method" class="tooltip">
+      <span>code : Int32</span>
+    code</a>, 
+    
+  
+    <a href="../../GLib/Error.html#domain%3AString-instance-method" class="tooltip">
+      <span>domain : String</span>
+    domain</a>, 
+    
+  
+    <a href="../../GLib/Error.html#finalize-instance-method" class="tooltip">
+      <span>finalize</span>
+    finalize</a>, 
+    
+  
+    <a href="../../GLib/Error.html#to_unsafe%3APointer%28LibGLib%3A%3AError%29-instance-method" class="tooltip">
+      <span>to_unsafe : Pointer(LibGLib::Error)</span>
+    to_unsafe</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(pointer:Pointer(LibGLib::Error),transfer:GICrystal::Transfer)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(pointer : Pointer(LibGLib::Error), transfer : <a href="../../GICrystal/Transfer.html">GICrystal::Transfer</a>)
+
+        <a class="method-permalink" href="#new%28pointer%3APointer%28LibGLib%3A%3AError%29%2Ctransfer%3AGICrystal%3A%3ATransfer%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(message:String=&quot;&quot;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(message : <a href="../../String.html">String</a> = <span class="s">&quot;&quot;</span>)
+
+        <a class="method-permalink" href="#new%28message%3AString%3D%22%22%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
