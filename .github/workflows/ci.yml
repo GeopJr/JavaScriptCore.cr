@@ -1,0 +1,19 @@
+name: Specs & Lint
+
+on: [push, pull_request]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    container: alpine:edge
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: apk add webkit2gtk-5.0-dev gobject-introspection-dev crystal shards yaml-dev
+      - name: Shards install
+        run: shards install
+      - name: Generate bindings
+        run: ./bin/gi-crystal
+      - name: Spec
+        run: crystal spec --order random || exit 1
+      - name: Check formatting
+        run: crystal tool format --check

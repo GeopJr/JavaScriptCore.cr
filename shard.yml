@@ -1,0 +1,13 @@
+name: javascriptcore
+version: 1.0.0
+
+authors:
+  - Evangelos Paterakis <evan@geopjr.dev>
+
+dependencies:
+  gi-crystal:
+    github: hugopl/gi-crystal
+
+crystal: 1.5.0
+
+license: BSD-2-Clause

@@ -1,0 +1,5 @@
+namespace: JavaScriptCore
+version: "5.0"
+# TODO: change to `require_after:` on next gi-crystal release
+include:
+  - alias.cr
